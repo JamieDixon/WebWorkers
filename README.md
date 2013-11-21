@@ -1,0 +1,1 @@
+A brief trail at getting HTML5 Worker to run Javascript code in a seperate thread when available otherwise fall back to executing the script in the current UI thread.
