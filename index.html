@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Web Workers</title>
+	<script src="theman.js"></script>
+	<script src="index.js"></script>
+	<script>
+
+	var flights = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+	var theman = new TheMan("index.js");
+
+	theman.spawnWorker(function(e){
+		var data = e.data;
+		console.log(data);
+	});
+
+	theman.postMessage(flights, invoke);
+	</script>
+</head>
+<body>
+	<p>Testing the use of web workers</p>
+	<img src="http://www.thisiscolossal.com/wp-content/uploads/2013/01/2.gif" width="200" height="200"/>
+</body>
+</html>
